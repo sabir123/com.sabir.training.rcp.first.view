@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Added View Category"
+            id="com.sabir.training.rcp.first.view">
+      </category>
+      <view
+            id="com.sabir.training.rcp.first.view.views.AddedView"
+            name="Added View"
+            icon="icons/sample.png"
+            class="com.sabir.training.rcp.first.view.views.AddedView"
+            category="com.sabir.training.rcp.first.view"
+            inject="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="com.sabir.training.rcp.first.perspective">
+         <view
+               id="com.sabir.training.rcp.first.view.views.AddedView"
+               relative="com.sabir.training.rcp.first.viewID"
+               relationship="right"
+               ratio="0.5">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>
